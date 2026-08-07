@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import contentData from '@/data/content.json';
 
@@ -43,7 +44,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="relative w-[391px] h-[407px]">
-              <img src={hero.image} alt="Hero Illustration" className="w-full h-full object-contain" />
+              <Image src={hero.image} alt="Hero Illustration" fill className="object-contain" priority sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </motion.div>
         </div>
